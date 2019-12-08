@@ -5,7 +5,7 @@ echo color("red","     ===========================\n");
 echo color("red","| Claim Voucher Gojek                |\n");
 echo color("red","| Auto create Gojek X Redeem voucher |\n");
 echo color("blue","| Facebook : Kevin Mitnickz          |\n");
-echo color("blue","| Script   : Claim Gofood & Goride   |\n");
+echo color("yellow","| Script   : Claim Gofood & Goride   |\n");
 echo color("blue","| Creator  : kvnMtnckz               |\n");
 echo color("green","| Time    :  ".date('[d-m-Y] [H:i:s]')." |\n");
 echo color("green","     ===========================\n");
