@@ -11,7 +11,7 @@ echo color("green","     ===========================\n");
 
 // function change(){
         $nama = nama();
-        $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
+        $email = str_replace(" ", "", $nama) . mt_rand(100, 99999);
         ulang:
         echo color("nevy","?] Nomor   : ");
         // $no = trim(fgets(STDIN));
