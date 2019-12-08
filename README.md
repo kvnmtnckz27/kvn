@@ -20,7 +20,7 @@ git clone https://github.com/kvnmtnvkz27/kvn
 lalu masukan kode perintah untuk menjalankan script , kode ini untuk daftar dan claim voucher go food gojek
 cd gofood
 
-php tembak.php
+php tembak1.php
 
 
 
