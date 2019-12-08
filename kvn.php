@@ -13,7 +13,7 @@ echo color("green","     ===========================\n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","?] Nomor : ");
+        echo color("nevy","?] Nomor  : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
