@@ -5,7 +5,7 @@ echo color("red","     ===========================\n");
 echo color("red","| Claim Voucher Gojek                |\n");
 echo color("red","| Auto create Gojek X Redeem voucher |\n");
 echo color("blue","| Facebook : Kevin Mitnickz          |\n");
-echo color("yellow","| Script  : No Claim                |\n");
+echo color("yellow","| Script   : No Claim                |\n");
 echo color("blue","| Creator  : kvnMtnckz               |\n");
 echo color("green","| Time     : ".date('[d-m-Y] [H:i:s]')." |\n");
 echo color("green","     ===========================\n");
@@ -14,7 +14,7 @@ echo color("green","     ===========================\n");
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","?] Nomor : ");
+        echo color("nevy","?] Nomor   : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
