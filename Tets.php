@@ -76,9 +76,7 @@ echo color("green","     ===========================\n");
                                         $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
                                         curl_close($ch);
                                         $debug['text'] = $pesan;
-                                        $debug['respon'] = json_decode($datas, true);
-        
-         
+                                        $debug['respon'] = json_decode($datas, true)
          }
          }
         }
