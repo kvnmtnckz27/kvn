@@ -91,7 +91,7 @@ echo color("green","     ===========================\n");
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba19);
-        goto goride;
+        goto setpin;
         }else{
         echo "\n".color("green","+] Message: ".$messageboba19);
         goride:
