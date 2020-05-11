@@ -72,7 +72,6 @@ echo color("green","     ===========================\n");
          }
          }
          }
-         }
          }else{
          goto setpin;
          }
