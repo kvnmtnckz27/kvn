@@ -51,9 +51,6 @@ function change(){
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo "\n".color("yellow","+] accessToken : ".$token."\n\n");
         save("token.txt",$token);
-        echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
-        $pilihan = trim(fgets(STDIN));
-        if($pilihan == "y" || $pilihan == "Y"){
          setpin:
          echo "\n".color("nevy","?] Mau set pin?: y/n ");
          $pilih1 = trim(fgets(STDIN));
