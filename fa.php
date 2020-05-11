@@ -81,7 +81,6 @@ function change(){
          $pilih = trim(fgets(STDIN));
          if($pilih == "y" || $pilih == "Y"){
          echo "\n==============REGISTER==============\n";
-         goto ulang;
          }else{
          echo "\n==============REGISTER==============\n";
          goto ulang;
