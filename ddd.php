@@ -87,6 +87,5 @@ function change(){
          echo "\n==============REGISTER==============\n";
          goto ulang;
   }
- }
 }
 echo change()."\n"; ?>
