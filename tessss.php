@@ -1,56 +1,32 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "functi.php";
-echo color("red","     ===========================\n");
-echo color("red","| Claim Voucher Gojek                |\n");
-echo color("red","| Auto create Gojek X Redeem voucher |\n");
-echo color("blue","| Facebook : Kevin Mitnickz          |\n");
-echo color("blue","| Creator  : kvnMtnckz               |\n");
-echo color("green","| Time     : ".date('[d-m-Y] [H:i:s]')." |\n");
-echo color("green","     ===========================\n");
-
-// function change(){
+echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("yellow","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."        # \n");
+echo color("yellow","[•]  CYBER OMAN CREW                        # \n");
+echo color("yellow","[•]  Tulis nomor pakai 62xxxxxxxxx          #\n");
+echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
+function change(){
         $nama = nama();
-        $email = str_replace(" ", "", $nama) . mt_rand(100, 99999);
+        $email = str_replace(" ", "", $nama) . mt_rand(1000, 9999);
         ulang:
-        echo color("nevy","?] Nomor   : ");
-        // $no = trim(fgets(STDIN));
-        $nohp = trim(fgets(STDIN));
-        $nohp = str_replace("62","62",$nohp);
-        $nohp = str_replace("(","",$nohp);
-        $nohp = str_replace(")","",$nohp);
-        $nohp = str_replace("-","",$nohp);
-        $nohp = str_replace(" ","",$nohp);
-
-        if (!preg_match('/[^+0-9]/', trim($nohp))) {
-            if (substr(trim($nohp),0,3)=='62') {
-                $hp = trim($nohp);
-            }
-            else if (substr(trim($nohp),0,1)=='0') {
-                $hp = '62'.substr(trim($nohp),1);
-        }
-         elseif(substr(trim($nohp), 0, 2)=='62'){
-            $hp = '6'.substr(trim($nohp), 1);
-        }
-        else{
-            $hp = '1'.substr(trim($nohp),0,13);
-        }
-    }
-        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
+        echo color("nevy","+] NOMOR BARU : ");
+        $no = trim(fgets(STDIN));
+        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("green","+] Kode verifikasi sudah di kirim")."\n";
+        echo color("green","+] CEK OTP DI HAPE")."\n";
         otp:
-        echo color("nevy","?] Otp: ");
+        echo color("nevy","?] OTP: ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("green","+] Berhasil mendaftar\n");
+        echo color("green","+] BERHASIL TERDAFTAR");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("green","+] Your access token : ".$token."\n\n");
+        echo "\n".color("yellow","+] accessToken : ".$token."\n\n");
         save("token.txt",$token);
         echo "\n".color("nevy","?] Mau Redeem Voucher?: y/n ");
         $pilihan = trim(fgets(STDIN));
