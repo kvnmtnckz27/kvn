@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Jakarta');
+date_default_timezone_set('Asia/Makassar');
 include "functi.php";
 echo color("red","     ===========================\n");
 echo color("red","| Claim Voucher Gojek                |\n");
